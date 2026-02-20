@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Nehal 🌸</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=IM+Fell+English:ital@0;1&family=Caveat:wght@400;600;700&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+
+/* ── SECRET EASTER EGG ── */
+
+#secret-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(25,25,25,0.95); /* dark gray */
+  backdrop-filter:blur(4px);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+
+.secret-box{
+  background:#2f2f2f; /* dark gray card */
+  padding:32px;
+  border-radius:18px;
+  text-align:center;
+  max-width:520px;
+  width:92%;
+  border:1px solid #444;
+  box-shadow:0 20px 60px rgba(0,0,0,0.6);
+  max-height:90vh;
+  overflow-y:auto;
+}
+
+.secret-box h2{
+  font-family:'Cinzel Decorative',cursive;
+  font-size:1.4rem;
+  letter-spacing:0.08em;
+  color:#f4a7c0;
+  margin-bottom:20px;
+}
+
+.secret-photo{
+  width:100%;
+  border-radius:12px;
+  margin-top:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.secret-video{
+  width:100%;
+  margin-top:20px;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.secret-caption{
+  font-family:'Cinzel Decorative',cursive;
+  font-size:1.3rem;
+  color:#f4a7c0;
+  margin-top:16px;
+  margin-bottom:20px;
+  line-height:1.6;
+  letter-spacing:0.08em;
+  text-align:center;
+}.secret-box button{
+  margin-top:20px;
+  padding:10px 28px;
+  font-family:'Cinzel Decorative',cursive;
+  font-size:0.75rem;
+  letter-spacing:0.15em;
+  background:#f4a7c0;
+  border:none;
+  color:#1a1a1a;
+  cursor:pointer;
+  border-radius:6px;
+  transition:0.25s;
+}
+
+.secret-box button:hover{
+  background:#e8789a;
+}
+
+/* 💋 Kiss Heart */
+.kiss-heart{
+  position:fixed;
+  width:12px;
+  height:12px;
+  background:#e8789a;
+  transform:rotate(45deg);
+  pointer-events:none;
+  z-index:999;
+  animation:kissPop 1.2s ease-out forwards;
+}
+
+.kiss-heart::before,
+.kiss-heart::after{
+  content:'';
+  position:absolute;
+  width:12px;
+  height:12px;
+  background:#e8789a;
+  border-radius:50%;
+}
+
+.kiss-heart::before{top:-6px;left:0;}
+.kiss-heart::after{left:-6px;top:0;}
+
+@keyframes kissPop{
+  0%{opacity:1;transform:translateY(0) scale(1) rotate(45deg);}
+  100%{opacity:0;transform:translateY(-40px) scale(2) rotate(45deg);}
+}
+
+:root {
+  --pink-deep:#e8789a; --pink-mid:#f4a7c0;
+  --pink-light:#fce4ec; --pink-blush:#ffd6e7;
+  --ink:#2a1a24; --ink-soft:#5a3a4a;
+  --nb-bg:#f8faff; --nb-line:rgba(200,216,234,0.8);
+  --nb-margin:rgba(244,167,192,0.5);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  width:100vw;height:100vh;overflow:hidden;
+  background:radial-gradient(ellipse at 45% 40%,#ffd6e7 0%,#fce4ec 55%,#f5b8cc 100%);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Kalam',cursive;
+}
+
+/* ── HEARTS ── */
+.hw{position:fixed;pointer-events:none;z-index:2;
+  animation:hf var(--d,5s) ease-in-out infinite var(--dl,0s);}
+@keyframes hf{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-12px) rotate(var(--r,0deg))}}
+
+/* ── HK ORNAMENTS ── */
+.hk-bar{position:fixed;left:0;width:100%;display:flex;justify-content:center;
+  pointer-events:none;z-index:2;opacity:0.55;}
+.hk-bar.top{top:10px;} .hk-bar.bot{bottom:10px;}
+
+/* ── LANDING ── */
+#landing{
+  position:fixed;inset:0;z-index:600;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:radial-gradient(ellipse at 50% 40%,#ffd6e7 0%,#fce4ec 55%,#f5b8cc 100%);
+  transition:opacity 0.7s ease;
+}
+#landing .l-eyebrow{font-family:'Caveat',cursive;font-size:clamp(0.85rem,2vw,1.1rem);color:var(--pink-deep);letter-spacing:0.3em;opacity:0;animation:fu 0.9s 0.1s ease forwards;}
+#landing .l-name{font-family:'Cinzel Decorative',cursive;font-size:clamp(1.8rem,5.5vw,4.4rem);color:var(--ink);text-shadow:0 2px 24px rgba(232,120,154,0.3);opacity:0;animation:fu 0.9s 0.3s ease forwards;line-height:1.2;text-align:center;}
+#landing .l-nicks{font-family:'IM Fell English',serif;font-style:italic;font-size:clamp(0.85rem,1.8vw,1.2rem);color:var(--ink-soft);opacity:0;animation:fu 0.9s 0.55s ease forwards;}
+#landing .l-grogu{font-family:'Caveat',cursive;font-size:clamp(1rem,2.2vw,1.55rem);color:var(--pink-deep);letter-spacing:0.1em;opacity:0;animation:fu 0.9s 0.75s ease forwards;}
+#landing .l-btn{
+  margin-top:20px;padding:12px 48px;
+  font-family:'Cinzel Decorative',cursive;font-size:0.82rem;letter-spacing:0.2em;
+  color:var(--ink);background:transparent;border:none;cursor:pointer;
+  position:relative;opacity:0;animation:fu 0.9s 1s ease forwards;
+}
+#landing .l-btn::before,#landing .l-btn::after{
+  content:'';position:absolute;left:0;right:0;height:1.5px;background:var(--pink-deep);
+}
+#landing .l-btn::before{top:0;}#landing .l-btn::after{bottom:0;}
+#landing .l-btn:hover{color:var(--pink-deep);}
+#landing .l-inner{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;padding:24px;}
+@keyframes fu{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── DIARY SCENE ── */ #scene{position:relative;z-index:10;display:none;} #diary-shadow{ position:absolute;bottom:-16px;left:8%;width:84%;height:22px; background:radial-gradient(ellipse,rgba(90,30,50,0.25) 0%,transparent 75%); border-radius:50%;pointer-events:none; } #diary{ position:relative; width:min(680px,88vw);height:min(480px,78vh); border-radius:6px 12px 12px 6px; box-shadow:-4px 0 12px rgba(0,0,0,0.18),4px 4px 28px rgba(90,30,50,0.22),0 8px 32px rgba(90,30,50,0.15); }/* ── SPINE ── */
+#spine{
+  position:absolute;left:0;top:0;bottom:0;width:38px;
+  background:linear-gradient(180deg,#b84060 0%,#c0506e 30%,#b03858 70%,#a03050 100%);
+  border-radius:6px 0 0 6px;
+  box-shadow:inset -3px 0 8px rgba(0,0,0,0.2),inset 2px 0 4px rgba(255,255,255,0.08);
+  z-index:5;display:flex;flex-direction:column;align-items:center;padding:8px 0;
+}
+.rhole{width:14px;height:14px;background:#2a1824;border-radius:50%;border:2px solid #1a0e18;box-shadow:inset 0 1px 3px rgba(0,0,0,0.5);flex-shrink:0;}
+
+/* ── RINGS ── */
+#rings{
+  position:absolute;left:18px;top:0;bottom:0;width:44px;
+  z-index:20;pointer-events:none;
+  display:flex;flex-direction:column;justify-content:space-around;padding:24px 0;
+}
+.ring{position:relative;width:30px;height:24px;}
+.rb{position:absolute;left:0;top:50%;width:30px;height:22px;border:3px solid #888;border-radius:50%;transform:translateY(-50%) rotateX(70deg);background:linear-gradient(180deg,#bbb 0%,#888 50%,#666 100%);box-shadow:0 2px 4px rgba(0,0,0,0.4);}
+.rf{position:absolute;left:0;top:50%;width:30px;height:22px;border:3px solid #aaa;border-top:none;border-radius:0 0 50% 50%;transform:translateY(-35%) rotateX(70deg);}
+
+/* ── PAGE AREA ── */
+#page-area{
+  position:absolute;left:38px;top:0;right:0;bottom:0;
+  border-radius:0 12px 12px 0;overflow:hidden;background:var(--nb-bg);
+}
+#page-stack{position:absolute;left:-2px;top:4px;bottom:4px;width:10px;background:repeating-linear-gradient(90deg,#e8e8e8,#e8e8e8 1px,#f0f0f0 1px,#f0f0f0 3px);border-radius:0 2px 2px 0;}
+
+/* ── DIARY PAGES ── */
+.dpage{
+  position:absolute;inset:0;background:var(--nb-bg);
+  display:none;flex-direction:column;overflow:hidden;
+  border-radius:0 12px 12px 0;
+}
+.dpage.active{display:flex;}
+/* notebook lines */
+.dpage::before{content:'';position:absolute;inset:0;
+  background-image:repeating-linear-gradient(to bottom,transparent,transparent 31px,var(--nb-line) 31px,var(--nb-line) 32px);
+  background-size:100% 32px;pointer-events:none;z-index:0;}
+/* margin line */
+.dpage::after{content:'';position:absolute;top:0;bottom:0;left:44px;width:1.5px;background:var(--nb-margin);pointer-events:none;z-index:1;}
+
+.pc{position:relative;z-index:2;padding:14px 20px 14px 56px;height:100%;overflow-y:auto;display:flex;flex-direction:column;}
+.pc::-webkit-scrollbar{width:3px;}
+.pc::-webkit-scrollbar-thumb{background:var(--pink-mid);border-radius:2px;}
+
+/* ── PAGE CONTENT STYLES ── */
+.nb-date{font-family:'Kalam',cursive;font-size:0.76rem;color:var(--pink-deep);line-height:32px;}
+.nb-chap{font-family:'Cinzel Decorative',cursive;font-size:0.5rem;letter-spacing:0.35em;color:var(--pink-deep);margin-bottom:2px;}
+.nb-h{font-family:'Kalam',cursive;font-size:clamp(0.95rem,2vw,1.4rem);color:var(--ink);font-weight:700;line-height:64px;}
+.nb-body{font-family:'Kalam',cursive;font-size:clamp(0.78rem,1.3vw,0.95rem);color:#2a2a3a;line-height:32px;}
+.nb-body em{color:var(--pink-deep);font-style:italic;}
+.nb-doodle{position:absolute;pointer-events:none;opacity:0.2;z-index:1;}
+
+/* ── COLLAGE ── */
+.collage-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 180px;
+  gap:8px;
+  margin-top:6px;
+}
+
+.collage-grid .cc{
+  background:var(--pink-blush);
+  border:2px solid var(--pink-mid);
+  border-radius:6px;
+  overflow:hidden;
+  cursor:pointer;
+  position:relative;
+}
+
+.collage-grid .cc:nth-child(1){
+  grid-column:1 / 3;
+}
+
+.collage-grid .cc:nth-child(4){
+  grid-column:2 / 4;
+}
+
+.collage-grid .cc img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.collage-hint{
+  font-family:'Caveat',cursive;
+  font-size:0.72rem;
+  color:var(--pink-deep);
+  opacity:0.75;
+  pointer-events:none;
+}
+/* ── LETTER PHOTO ── */
+.photo-row{display:flex;gap:12px;align-items:flex-start;margin-top:4px;flex:1;}
+.lphoto{
+  width:130px;height:160px;flex-shrink:0;
+  background:var(--pink-blush);border:2px solid var(--pink-mid);
+  border-radius:3px;overflow:hidden;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:2px 2px 8px rgba(90,30,50,0.1);
+}
+.lphoto img{width:100%;height:100%;object-fit:cover;}
+.ph-hint{font-family:'Caveat',cursive;font-size:0.68rem;color:var(--pink-deep);text-align:center;padding:4px;pointer-events:none;}
+.ph-cap{font-family:'Kalam',cursive;font-size:0.68rem;color:var(--ink-soft);text-align:center;margin-top:4px;}
+
+/* ── VIDEO PAGE ── */
+#p4{background:#0a0306;}
+#video-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:10px;background:#0a0306;}
+.fstrip{height:20px;background:#111;display:flex;align-items:center;justify-content:space-around;width:100%;}
+.fh{width:9px;height:12px;background:#2a2a2a;border-radius:2px;border:1.5px solid #444;}
+.fscreen{width:100%;aspect-ratio:16/9;background:#000;position:relative;overflow:hidden;}
+.fscreen video{width:100%;height:100%;object-fit:cover;}
+#film-overlay{position:absolute;inset:0;background:#000;z-index:5;display:flex;align-items:center;justify-content:center;}
+.cframe{border:5px double #222;padding:16px 36px;text-align:center;background:rgba(5,2,8,0.92);}
+.cnum{font-family:'Cinzel Decorative',cursive;font-size:clamp(2rem,8vw,5rem);color:#f0d890;text-shadow:0 0 40px rgba(240,216,100,0.6);}
+.fgrain{position:absolute;inset:0;pointer-events:none;opacity:0.04;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:gr 0.09s steps(1) infinite;}
+@keyframes gr{0%{background-position:0 0}25%{background-position:30px -20px}50%{background-position:-15px 10px}75%{background-position:20px 25px}}
+.vlabel{font-family:'IM Fell English',serif;font-style:italic;color:rgba(255,255,255,0.25);font-size:0.76rem;letter-spacing:0.15em;}
+#play-btn{display:none;font-family:'Cinzel Decorative',cursive;font-size:0.62rem;letter-spacing:0.22em;color:#f0d890;background:transparent;border:1px solid rgba(240,216,144,0.3);padding:9px 32px;cursor:pointer;}
+#play-btn:hover{background:rgba(240,216,144,0.08);}
+
+/* ── NAV ── */
+#nav-wrap{position:fixed;bottom:90px;left:0;width:100%;display:flex;justify-content:center;align-items:center;gap:16px;z-index:200;pointer-events:none;opacity:0;transition:opacity 0.5s;}
+.nbtn{pointer-events:all;font-family:'Cinzel Decorative',cursive;font-size:0.62rem;letter-spacing:0.18em;color:var(--ink-soft);background:rgba(255,255,255,0.6);border:1.5px solid var(--pink-mid);padding:9px 24px;cursor:pointer;border-radius:2px;backdrop-filter:blur(4px);transition:all 0.2s;}
+.nbtn:hover{background:var(--pink-deep);border-color:var(--pink-deep);color:#fff;}
+.nbtn.hide{opacity:0;pointer-events:none;}
+.dot{width:5px;height:5px;border-radius:50%;background:var(--pink-mid);transition:all 0.3s;}
+.dot.on{background:var(--pink-deep);transform:scale(1.5);}
+#dots{display:flex;gap:6px;align-items:center;}
+
+/* ── BEE CANVAS ── */
+#bees{position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:300;}
+
+/* ── BLACKOUT ── */
+#blackout{position:fixed;inset:0;background:#000;z-index:5000;display:none;align-items:center;justify-content:center;}
+#blackout video{width:100%;height:100%;object-fit:contain;}
+
+/* ── UPLOAD BTN ── */
+#upload-btn{position:fixed;top:10px;right:10px;z-index:400;padding:7px 14px;background:rgba(20,5,15,0.6);color:rgba(255,220,200,0.85);border:1px solid rgba(255,200,180,0.25);font-family:monospace;font-size:11px;cursor:pointer;border-radius:4px;}
+</style>
+</head>
+<body>
+
+<!-- HEARTS -->
+<div class="hw" style="top:7%;left:10%;--r:-14deg;--d:5.2s;--dl:0s"><svg width="42" height="40" viewBox="0 0 44 42"><path d="M22 37C22 37 4 25 4 13 3 5 9 1 15 2c3 0 5 3 7 6 2-3 4-6 7-6 6-1 12 4 11 11C39 25 22 37 22 37Z" fill="#f5c518" stroke="#d4a017" stroke-width="2"/><path d="M10 11Q13 18 11 23" stroke="#c49010" stroke-width="0.9" stroke-linecap="round" opacity="0.4"/></svg></div>
+<div class="hw" style="top:12%;right:8%;--r:11deg;--d:4.8s;--dl:1.4s"><svg width="30" height="28" viewBox="0 0 44 42"><path d="M22 37C22 37 4 25 4 13 3 5 9 1 15 2c3 0 5 3 7 6 2-3 4-6 7-6 6-1 12 4 11 11C39 25 22 37 22 37Z" fill="#f5c518" stroke="#d4a017" stroke-width="2.2"/></svg></div>
+<div class="hw" style="bottom:14%;left:7%;--r:9deg;--d:5.8s;--dl:2.2s"><svg width="34" height="32" viewBox="0 0 44 42"><path d="M22 37C22 37 4 25 4 13 3 5 9 1 15 2c3 0 5 3 7 6 2-3 4-6 7-6 6-1 12 4 11 11C39 25 22 37 22 37Z" fill="#f5c518" stroke="#d4a017" stroke-width="2.2"/></svg></div>
+<div class="hw" style="bottom:18%;right:6%;--r:-10deg;--d:5s;--dl:0.7s"><svg width="26" height="24" viewBox="0 0 44 42"><path d="M22 37C22 37 4 25 4 13 3 5 9 1 15 2c3 0 5 3 7 6 2-3 4-6 7-6 6-1 12 4 11 11C39 25 22 37 22 37Z" fill="#f5c518" stroke="#d4a017" stroke-width="2.2"/></svg></div>
+<div class="hw" style="top:44%;left:2%;--r:18deg;--d:6s;--dl:3.2s"><svg width="20" height="18" viewBox="0 0 44 42"><path d="M22 37C22 37 4 25 4 13 3 5 9 1 15 2c3 0 5 3 7 6 2-3 4-6 7-6 6-1 12 4 11 11C39 25 22 37 22 37Z" fill="#f5c518" stroke="#d4a017" stroke-width="2.2"/></svg></div>
+<div class="hw" style="top:52%;right:3%;--r:-18deg;--d:5.5s;--dl:3.8s"><svg width="22" height="20" viewBox="0 0 44 42"><path d="M22 37C22 37 4 25 4 13 3 5 9 1 15 2c3 0 5 3 7 6 2-3 4-6 7-6 6-1 12 4 11 11C39 25 22 37 22 37Z" fill="#f5c518" stroke="#d4a017" stroke-width="2.2"/></svg></div>
+<div class="hw" style="top:28%;left:4%;--r:5deg;--d:4.6s;--dl:1.8s"><svg width="17" height="15" viewBox="0 0 44 42"><path d="M22 37C22 37 4 25 4 13 3 5 9 1 15 2c3 0 5 3 7 6 2-3 4-6 7-6 6-1 12 4 11 11C39 25 22 37 22 37Z" fill="#f5c518" stroke="#d4a017" stroke-width="2.2"/></svg></div>
+<div class="hw" style="top:68%;right:11%;--r:-6deg;--d:5.3s;--dl:2.8s"><svg width="19" height="17" viewBox="0 0 44 42"><path d="M22 37C22 37 4 25 4 13 3 5 9 1 15 2c3 0 5 3 7 6 2-3 4-6 7-6 6-1 12 4 11 11C39 25 22 37 22 37Z" fill="#f5c518" stroke="#d4a017" stroke-width="2.2"/></svg></div>
+
+<!-- HK ORNAMENTS -->
+<div class="hk-bar top"><svg width="min(480px,82vw)" height="46" viewBox="0 0 520 60" style="color:#e8789a"><use href="#hksym"/></svg></div>
+<div class="hk-bar bot"><svg width="min(480px,82vw)" height="46" viewBox="0 0 520 60" style="color:#e8789a;transform:scaleY(-1)"><use href="#hksym"/></svg></div>
+
+<!-- ═══════════ LANDING ═══════════ -->
+<div id="landing">
+  <div style="position:absolute;top:14px;left:0;width:100%;display:flex;justify-content:center;opacity:0.6;pointer-events:none;">
+    <svg width="min(500px,85vw)" height="48" viewBox="0 0 520 60" style="color:#e8789a"><use href="#hksym"/></svg>
+  </div>
+  <div class="l-inner">
+    <p class="l-eyebrow">— a small world made just for —</p>
+    <h1 class="l-name" id="secret-trigger">NEHAL SHETTY</h1>
+    <div style="margin:6px 0;pointer-events:none;">
+      <svg width="min(360px,70vw)" height="38" viewBox="0 0 520 60" style="color:#e8789a;opacity:0.5"><use href="#hksym"/></svg>
+    </div>
+    <p class="l-nicks">my halli &nbsp;·&nbsp; my pie &nbsp;·&nbsp; my chinnaarii</p>
+    <p class="l-grogu">my Groguu 🌸</p>
+    <div style="margin:6px 0;pointer-events:none;">
+      <svg width="min(240px,50vw)" height="30" viewBox="0 0 520 60" style="color:#e8789a;opacity:0.4;transform:scaleY(-1)"><use href="#hksym"/></svg>
+    </div>
+    <button class="l-btn" onclick="beginJourney()">Begin</button>
+  </div>
+  <div style="position:absolute;bottom:14px;left:0;width:100%;display:flex;justify-content:center;opacity:0.6;pointer-events:none;">
+    <svg width="min(500px,85vw)" height="48" viewBox="0 0 520 60" style="color:#e8789a;transform:scaleY(-1)"><use href="#hksym"/></svg>
+  </div>
+</div>
+
+<!-- ═══════════ DIARY ═══════════ -->
+<div id="scene">
+  <div id="diary-shadow"></div>
+  <div id="diary">
+
+    <!-- SPINE -->
+    <div id="spine">
+      <div style="flex:1"></div>
+      <div class="rhole"></div><div style="flex:1"></div>
+      <div class="rhole"></div><div style="flex:1"></div>
+      <div class="rhole"></div><div style="flex:1"></div>
+      <div class="rhole"></div><div style="flex:1"></div>
+      <div class="rhole"></div><div style="flex:1"></div>
+    </div>
+
+    <!-- PAGE AREA -->
+    <div id="page-area">
+      <div id="page-stack"></div>
+
+      <!-- ── PAGE 0: COLLAGE ── -->
+      <div class="dpage active" id="p0">
+        <svg style="position:absolute;top:7px;left:50%;transform:translateX(-50%);opacity:0.28;pointer-events:none;" width="160" height="20" viewBox="0 0 520 60" color="#e8789a"><use href="#hksym"/></svg>
+        <div class="pc">
+          <span class="nb-date">21st Feb 2026</span>
+          <h2 class="nb-h" style="line-height:36px;margin-bottom:6px;">lavani🌸</h2>
+          <svg width="160" height="16" viewBox="0 0 520 60" style="color:#e8789a;opacity:0.4;margin-bottom:6px;"><use href="#hksym"/></svg>
+          <div class="collage-grid">
+            <div class="cc" id="cc0"><img src="0.jpg"></span></div>
+            <div class="cc" id="cc1"><img src="1.jpg"></span></div>
+            <div class="cc" id="cc2"><img src="2.jpg"></span></div>
+            <div class="cc" id="cc3"><img src="3.jpg"></span></div>
+            <div class="cc" id="cc4"><img src="4.jpg"></span></div>
+          </div>
+        </div>
+      </div>
+      <!-- hidden file inputs for collage (outside page so clicks work) -->
+      <input type="file" id="ci" accept="image/*" style="display:none">
+
+     <!-- ── PAGE 1: LETTER I ── -->
+<div class="dpage" id="p1">
+
+  <!-- BOOKMARK -->
+  <div class="page-mark">groguu 🌸</div>
+
+  <svg class="nb-doodle" style="top:12px;right:16px;width:15px;" viewBox="0 0 44 42">
+    <path d="M22 37C22 37 4 25 4 13 3 5 9 1 15 2c3 0 5 3 7 6 2-3 4-6 7-6 6-1 12 4 11 11C39 25 22 37 22 37Z"
+      fill="#f5c518" stroke="#d4a017" stroke-width="2"/>
+  </svg>
+
+  <div class="pc">
+    <span class="nb-chap">Chapter I</span>
+    <span class="nb-date">21st Feb 2026</span>
+    <h2 class="nb-h">Where It All Began</h2>
+
+    <svg width="140" height="15" viewBox="0 0 520 60"
+      style="color:#e8789a;opacity:0.38;margin-bottom:4px;">
+      <use href="#hksym"/>
+    </svg>
+
+    <div class="photo-row">
+      <div>
+        <div class="lphoto">
+          <img src="5.jpg">
+        </div>
+        <p class="ph-cap">a memory 🌸</p>
+      </div>
+
+      <p class="nb-body" style="flex:1;">
+        <em> Our Starting Days. </em><br>
+        We met when we were 14.
+
+        That day when I turned around and called you “Halli” just to tease you… I didn’t know I was teasing someone who would become one of the biggest parts of my life.
+
+        Back then we were just kids.
+
+        Now look at us.
+
+        If I had known how everything would turned out, I would still choose you every single time. In every lifetime. I would still turn around, still call your name, still make you mine.
+
+        Some people walk into your life slowly.
+
+        You didn’t.
+
+        You became home before I even realised it. 💛
+      </p>
+    </div>
+  </div>
+
+  <input type="file" id="li0" accept="image/*" style="display:none">
+</div>
+      <!-- ── PAGE 2: LETTER II ── -->
+<div class="dpage" id="p2">
+
+  <!-- BOOKMARK -->
+  <div class="page-mark">groguu 🌸</div>
+
+  <svg class="nb-doodle" style="top:12px;right:16px;width:13px;" viewBox="0 0 44 42">
+    <path d="M22 37C22 37 4 25 4 13 3 5 9 1 15 2c3 0 5 3 7 6 2-3 4-6 7-6 6-1 12 4 11 11C39 25 22 37 22 37Z"
+      fill="#f5c518" stroke="#d4a017" stroke-width="2"/>
+  </svg>
+
+  <div class="pc">
+    <span class="nb-chap">Chapter II</span>
+    <span class="nb-date">21st Feb 2026</span>
+    <h2 class="nb-h">Everything I love about you...</h2>
+
+    <svg width="140" height="15" viewBox="0 0 520 60"
+      style="color:#e8789a;opacity:0.38;margin-bottom:4px;">
+      <use href="#hksym"/>
+    </svg>
+
+    <div class="photo-row">
+
+      <p class="nb-body" style="flex:1;">
+        For the past three years, texting you good morning and shubhratri, telling you about my day, hearing about yours… it became something I can’t imagine not having. Being with you feels natural.
+
+        Peaceful. Like I don’t have to pretend to be anyone else.
+
+        You don’t realise this, but you have the most beautiful smile in the world. It changes my mood instantly. I really hope our kids inherit that one day.
+
+        Everything about you feels right to me. You’re mature, you make strong decisions… and yes, you get angry a lot sometimes — but even that is part of you. Taking care of you, handling you, understanding you… that’s something I genuinely value.
+
+        You don’t just exist in my life.
+
+        You matter in it. 😘
+      </p>
+
+      <div>
+        <div class="lphoto">
+          <img src="6.jpg">
+        </div>
+        <p class="ph-cap">my favourite 🌸</p>
+      </div>
+
+    </div>
+  </div>
+
+  <input type="file" id="li1" accept="image/*" style="display:none">
+</div>
+
+      <!-- ── PAGE 3: LETTER III ── -->
+<div class="dpage" id="p3">
+
+  <!-- BOOKMARK -->
+  <div class="page-mark">groguu 🌸</div>
+
+  <svg class="nb-doodle" style="top:12px;right:16px;width:17px;" viewBox="0 0 44 42">
+    <path d="M22 37C22 37 4 25 4 13 3 5 9 1 15 2c3 0 5 3 7 6 2-3 4-6 7-6 6-1 12 4 11 11C39 25 22 37 22 37Z"
+      fill="#f5c518" stroke="#d4a017" stroke-width="2"/>
+  </svg>
+
+  <svg class="nb-doodle" style="bottom:28px;left:52px;width:10px;" viewBox="0 0 44 42">
+    <path d="M22 37C22 37 4 25 4 13 3 5 9 1 15 2c3 0 5 3 7 6 2-3 4-6 7-6 6-1 12 4 11 11C39 25 22 37 22 37Z"
+      fill="#f5c518" stroke="#d4a017" stroke-width="2"/>
+  </svg>
+
+  <div class="pc">
+    <span class="nb-chap">Chapter III</span>
+    <span class="nb-date">21st Feb 2026</span>
+    <h2 class="nb-h">my Groguu. 🌸</h2>
+
+    <svg width="140" height="15" viewBox="0 0 520 60"
+      style="color:#e8789a;opacity:0.38;margin-bottom:4px;">
+      <use href="#hksym"/>
+    </svg>
+
+    <div class="photo-row">
+
+      <div>
+        <div class="lphoto">
+          <img src="7.jpg">
+        </div>
+        <p class="ph-cap">always you 🌸</p>
+      </div>
+
+      <p class="nb-body" style="flex:1;">
+        <em>Happy 20th Birthday, My Love.</em>
+        <br>
+
+        You’re on your trip right now — probably somewhere in Mumbai after getting off the cruise. I hope you’ve had the best time. And today, I just want you to enjoy fully. No stress. No overthinking. Just happiness.
+
+        When you’re back, I’m taking you on the best date.
+
+        Late-night drives.
+     
+        Mela again.
+
+        Maybe trampoline park round two.
+ 
+        Just us.
+
+        Happy Birthday again, Groguu.
+
+        Don’t fight with me today.
+
+        Just know this — I love you. And I’m always on your side. Even on the days we don’t understand each other properly.
+
+        Yours (not a puppy),  
+        KD 💛
+      </p>
+
+    </div>
+  </div>
+
+  <input type="file" id="li2" accept="image/*" style="display:none">
+</div>
+
+     <!-- ── PAGE 4: VIDEO ── -->
+<div class="dpage" id="p4" style="background:#0a0306;">
+  <div class="pc" style="padding:0;align-items:center;justify-content:center;background:#0a0306;">
+    <div id="video-wrap">
+
+      <div style="width:100%;max-width:540px;">
+
+        <div class="fstrip">
+          <div class="fh"></div><div class="fh"></div><div class="fh"></div><div class="fh"></div>
+          <div class="fh"></div><div class="fh"></div><div class="fh"></div><div class="fh"></div>
+        </div>
+
+        <div class="fscreen">
+          <div class="fgrain"></div>
+
+          <!-- ACTUAL VIDEO -->
+          <video id="main-vid"
+       src="our_story.mp4"
+       preload="auto"
+       playsinline
+       controls
+       style="width:100%;height:auto;border-radius:12px;">
+	</video>
+
+          <!-- Countdown Overlay -->
+          <div id="film-overlay">
+            <div class="cframe">
+              <div class="cnum" id="cdown">♡</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="fstrip">
+          <div class="fh"></div><div class="fh"></div><div class="fh"></div><div class="fh"></div>
+          <div class="fh"></div><div class="fh"></div><div class="fh"></div><div class="fh"></div>
+        </div>
+
+      </div>
+
+      <p class="vlabel">— for my groguu —</p>
+
+      <button id="play-btn" onclick="startCountdown()">
+        ▶ &nbsp; Play Our Story
+      </button>
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+    <!-- RINGS -->
+    <div id="rings">
+      <div class="ring"><div class="rb"></div><div class="rf"></div></div>
+      <div class="ring"><div class="rb"></div><div class="rf"></div></div>
+      <div class="ring"><div class="rb"></div><div class="rf"></div></div>
+      <div class="ring"><div class="rb"></div><div class="rf"></div></div>
+      <div class="ring"><div class="rb"></div><div class="rf"></div></div>
+    </div>
+  </div><!-- /diary -->
+</div><!-- /scene -->
+
+<!-- NAV -->
+<div id="nav-wrap">
+  <button class="nbtn hide" id="btn-prev" onclick="prevPage()">← prev</button>
+  <div id="dots"></div>
+  <button class="nbtn" id="btn-next" onclick="nextPage()">next →</button>
+</div>
+
+<!-- BEE CANVAS — pointer-events:none so it NEVER blocks clicks -->
+<canvas id="bees"></canvas>
+
+<!-- BLACKOUT -->
+<div id="blackout"></div>
+
+<!-- HK SYMBOL -->
+<svg style="display:none"><defs>
+<symbol id="hksym" viewBox="0 0 520 60">
+  <circle cx="260" cy="30" r="10" stroke="currentColor" stroke-width="1.8" fill="none"/>
+  <circle cx="260" cy="30" r="5" fill="currentColor" opacity="0.25"/>
+  <circle cx="260" cy="30" r="2" fill="currentColor"/>
+  <path d="M260 40 Q262 50 260 55 Q258 50 260 40Z" fill="currentColor" opacity="0.6"/>
+  <path d="M250 30 Q228 30 218 21 Q208 12 198 17 Q190 22 190 30 Q190 38 198 43 Q208 48 218 39 Q228 33 240 30" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <path d="M190 30 Q174 20 163 25 Q156 30 163 37 Q170 43 179 37 Q185 30 177 24" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <path d="M163 30 Q148 21 137 27 Q130 32 137 39 Q145 45 153 39 Q159 32 151 26" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <path d="M137 30 Q119 23 108 29 Q100 34 108 41 Q116 47 125 41 Q131 33 123 27" stroke="currentColor" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+  <path d="M108 30 Q91 19 77 24 Q67 29 71 37 Q76 45 87 40 Q95 34 91 25" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round"/>
+  <path d="M77 27 Q62 17 49 22 Q39 27 45 36 Q51 43 62 37" stroke="currentColor" stroke-width="0.9" fill="none" stroke-linecap="round"/>
+  <path d="M49 30 Q34 21 22 26 Q12 31 17 39 Q22 45 32 40" stroke="currentColor" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+  <path d="M22 32 Q11 27 6 32 Q4 37 9 39 Q15 41 19 37" stroke="currentColor" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+  <path d="M270 30 Q292 30 302 21 Q312 12 322 17 Q330 22 330 30 Q330 38 322 43 Q312 48 302 39 Q292 33 280 30" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <path d="M330 30 Q346 20 357 25 Q364 30 357 37 Q350 43 341 37 Q335 30 343 24" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <path d="M357 30 Q372 21 383 27 Q390 32 383 39 Q375 45 367 39 Q361 32 369 26" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <path d="M383 30 Q401 23 412 29 Q420 34 412 41 Q404 47 395 41 Q389 33 397 27" stroke="currentColor" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+  <path d="M412 30 Q429 19 443 24 Q453 29 449 37 Q444 45 433 40 Q425 34 429 25" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round"/>
+  <path d="M443 27 Q458 17 471 22 Q481 27 475 36 Q469 43 458 37" stroke="currentColor" stroke-width="0.9" fill="none" stroke-linecap="round"/>
+  <path d="M471 30 Q486 21 498 26 Q508 31 503 39 Q498 45 488 40" stroke="currentColor" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+  <path d="M498 32 Q509 27 514 32 Q516 37 511 39 Q505 41 501 37" stroke="currentColor" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+</symbol>
+</defs></svg>
+
+<script>
+
+// ───────── SECRET NAME TRIGGER ─────────
+document.addEventListener('DOMContentLoaded', function(){
+
+  const trigger = document.getElementById('secret-trigger');
+  const overlay = document.getElementById('secret-overlay');
+
+  let secretClicks = 0;
+
+  if(trigger && overlay){
+
+    trigger.addEventListener('click', function(){
+      secretClicks++;
+      console.log("Clicks:", secretClicks); // debug
+
+      if(secretClicks >= 10){
+        overlay.style.display = 'flex';
+        secretClicks = 0;
+      }
+    });
+
+  } else {
+    console.log("Trigger or Overlay not found.");
+  }
+
+});
+
+function closeSecret(){
+  const overlay = document.getElementById('secret-overlay');
+  if(overlay) overlay.style.display = 'none';
+}
+
+// ═══════════════════════════════════════════
+// PHOTO UPLOAD SYSTEM REMOVED (images are static now)
+// ═══════════════════════════════════════════
+
+// Nothing needed here anymore.
+// Keeping this section empty prevents JS crash.
+
+// ═══════════════════════════════════════════
+// PAGE STATE
+// ═══════════════════════════════════════════
+const TOTAL=5;
+let cur=0;
+let busy=false; // true while flip animation is running
+let diaryOpen=false;
+
+// ─── dots ───
+const dotsEl=document.getElementById('dots');
+for(let i=0;i<TOTAL;i++){
+  const d=document.createElement('div');
+  d.className='dot'+(i===0?' on':'');
+  dotsEl.appendChild(d);
+}
+
+function updateNav(){
+  document.querySelectorAll('.dot').forEach((d,i)=>{ d.className='dot'+(i===cur?' on':''); });
+  document.getElementById('btn-prev').className='nbtn'+(cur===0?' hide':'');
+  document.getElementById('btn-next').className='nbtn'+(cur===TOTAL-1?' hide':'');
+  if(cur===4) setTimeout(()=>{ document.getElementById('play-btn').style.display='inline-block'; },600);
+}
+
+// ─── show/hide pages ───
+function showPage(idx){
+  document.querySelectorAll('.dpage').forEach((p,i)=>{
+    p.classList.toggle('active',i===idx);
+  });
+}
+
+// ─── LANDING → DIARY ───
+function beginJourney(){
+
+  // 🎵 START MUSIC
+  const music = document.getElementById('bg-music');
+  if(music){
+    music.currentTime = 32;   // adjust if needed
+    music.volume = 0.3;       // 30% volume
+    music.play().catch(()=>{});
+  }
+
+  const l=document.getElementById('landing');
+  const s=document.getElementById('scene');
+  const n=document.getElementById('nav-wrap');
+  l.style.opacity='0';
+  setTimeout(()=>{
+    l.style.display='none';
+    s.style.display='block';
+    s.style.opacity='0';
+    s.style.transform='scale(0.55) translateY(50px)';
+    s.style.transition='opacity 0.65s ease,transform 0.8s cubic-bezier(.34,1.5,.64,1)';
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{
+      s.style.opacity='1';
+      s.style.transform='scale(1) translateY(0)';
+    }));
+    setTimeout(()=>{
+      n.style.opacity='1';
+      diaryOpen=true;
+      showPage(0);
+      updateNav();
+    },800);
+  },700);
+}
+// ═══════════════════════════════════════════
+// FLIP ANIMATION
+// ═══════════════════════════════════════════
+let flipCv=null,flipCx=null;
+function getFlipCanvas(){
+  if(flipCv) return {cv:flipCv,cx:flipCx};
+  flipCv=document.createElement('canvas');
+  flipCv.style.cssText='position:fixed;top:0;left:0;pointer-events:none;z-index:100;display:none;';
+  document.body.appendChild(flipCv);
+  flipCx=flipCv.getContext('2d');
+  return {cv:flipCv,cx:flipCx};
+}
+
+function ease(t){return t<0.5?2*t*t:-1+(4-2*t)*t;}
+
+// dir: 1=forward, -1=backward. fromIdx = page we're leaving.
+function animateFlip(dir,fromIdx,dur,onDone){
+  const {cv,cx}=getFlipCanvas();
+  cv.width=window.innerWidth; cv.height=window.innerHeight;
+  cv.style.display='block';
+
+  const pa=document.getElementById('page-area');
+  const sc=document.getElementById('scene');
+  const r=pa.getBoundingClientRect();
+
+  const isVideo=(fromIdx===4);
+  const bg=isVideo?'#0a0306':'#f8faff';
+  const lineC=isVideo?'transparent':'rgba(200,216,234,0.75)';
+  const margC=isVideo?'transparent':'rgba(244,167,192,0.45)';
+  const leanAmt=dir===1?-3:3;
+
+  let t0=null;
+  function frame(ts){
+    if(!t0)t0=ts;
+    const t=Math.min((ts-t0)/dur,1);
+    const e=ease(t);
+    cx.clearRect(0,0,cv.width,cv.height);
+
+    if(dir===1){
+      // page sweeps left: right edge from r.right→r.left
+      const pR=r.left+(r.right-r.left)*(1-e);
+      const pw=pR-r.left;
+      if(pw>0){
+        cx.save();
+        cx.beginPath();cx.rect(r.left,r.top,pw,r.height);cx.clip();
+        cx.fillStyle=bg;cx.fillRect(r.left,r.top,r.right-r.left,r.height);
+        if(!isVideo){
+          cx.strokeStyle=lineC;cx.lineWidth=1;
+          for(let ly=r.top+32;ly<r.top+r.height;ly+=32){
+            cx.beginPath();cx.moveTo(r.left+44,ly);cx.lineTo(r.left+pw,ly);cx.stroke();
+          }
+          cx.strokeStyle=margC;cx.lineWidth=1.5;
+          cx.beginPath();cx.moveTo(r.left+44,r.top);cx.lineTo(r.left+44,r.top+r.height);cx.stroke();
+        }
+        cx.restore();
+        const g=cx.createLinearGradient(pR-24,0,pR+4,0);
+        g.addColorStop(0,'rgba(0,0,0,0)');g.addColorStop(1,'rgba(0,0,0,0.2)');
+        cx.fillStyle=g;cx.fillRect(pR-24,r.top,28,r.height);
+        cx.strokeStyle='rgba(255,255,255,0.38)';cx.lineWidth=1.5;
+        cx.beginPath();cx.moveTo(pR,r.top);cx.lineTo(pR,r.top+r.height);cx.stroke();
+      }
+    } else {
+      // page sweeps right: left edge from r.left→r.right
+      const pL=r.left+(r.right-r.left)*e;
+      const pw=r.right-pL;
+      if(pw>0){
+        cx.save();
+        cx.beginPath();cx.rect(pL,r.top,pw,r.height);cx.clip();
+        cx.fillStyle=bg;cx.fillRect(r.left,r.top,r.right-r.left,r.height);
+        if(!isVideo){
+          cx.strokeStyle=lineC;cx.lineWidth=1;
+          for(let ly=r.top+32;ly<r.top+r.height;ly+=32){
+            cx.beginPath();cx.moveTo(r.left+44,ly);cx.lineTo(r.right,ly);cx.stroke();
+          }
+          cx.strokeStyle=margC;cx.lineWidth=1.5;
+          cx.beginPath();cx.moveTo(r.left+44,r.top);cx.lineTo(r.left+44,r.top+r.height);cx.stroke();
+        }
+        cx.restore();
+        const g=cx.createLinearGradient(pL-4,0,pL+24,0);
+        g.addColorStop(0,'rgba(0,0,0,0.2)');g.addColorStop(1,'rgba(0,0,0,0)');
+        cx.fillStyle=g;cx.fillRect(pL-8,r.top,32,r.height);
+        cx.strokeStyle='rgba(255,255,255,0.38)';cx.lineWidth=1.5;
+        cx.beginPath();cx.moveTo(pL,r.top);cx.lineTo(pL,r.top+r.height);cx.stroke();
+      }
+    }
+
+    // diary lean
+    const lean=Math.sin(t*Math.PI)*leanAmt;
+    sc.style.transform=`rotate(${lean}deg) translateY(${Math.sin(t*Math.PI)*-5}px)`;
+
+    if(t<1){requestAnimationFrame(frame);}
+    else{
+      cv.style.display='none';
+      sc.style.transform='';
+      if(onDone)onDone();
+    }
+  }
+  requestAnimationFrame(frame);
+}
+
+// ═══════════════════════════════════════════
+// NAVIGATION — simple, direct, no bee blocking
+// ═══════════════════════════════════════════
+function goPage(dir){
+  if(!diaryOpen||busy)return;
+
+  const from=cur;
+  const to=cur+dir;
+  if(to<0||to>=TOTAL)return;
+
+  busy=true;
+
+  beeGoFlip(dir,from,function(){
+    animateFlip(dir,from,750,function(){
+      cur=to;
+      showPage(cur);   // 🔥 moved here
+      updateNav();
+      busy=false;
+    });
+  });
+}
+
+function nextPage(){goPage(1);}
+function prevPage(){goPage(-1);}
+
+document.addEventListener('keydown',function(e){
+  if(e.key==='ArrowRight'||e.key==='ArrowDown')nextPage();
+  if(e.key==='ArrowLeft'||e.key==='ArrowUp')prevPage();
+});
+let swx=0;
+document.addEventListener('touchstart',function(e){swx=e.touches[0].clientX;});
+document.addEventListener('touchend',function(e){
+  const d=swx-e.changedTouches[0].clientX;
+  if(Math.abs(d)>40){d>0?nextPage():prevPage();}
+});
+
+// ═══════════════════════════════════════════
+// BEE SYSTEM
+// ═══════════════════════════════════════════
+const BC=document.getElementById('bees');
+const bx=BC.getContext('2d');
+// CRITICAL: pointer-events:none — bees never block clicks
+BC.style.pointerEvents='none';
+
+function resizeBC(){BC.width=window.innerWidth;BC.height=window.innerHeight;}
+resizeBC();window.addEventListener('resize',resizeBC);
+
+let mouseX=-999,mouseY=-999;
+document.addEventListener('mousemove',function(e){mouseX=e.clientX;mouseY=e.clientY;});
+
+// click on bees — use document click, check distance to each bee
+document.addEventListener('click',function(e){
+  beeList.forEach(function(b){
+    const dx=b.x-e.clientX,dy=b.y-e.clientY;
+    if(Math.sqrt(dx*dx+dy*dy)<32&&b.mode!=='flipping'&&b.mode!=='flyto'){
+      b.mode='angry';b.angryT=2.5;
+    }
+  });
+});
+
+function diaryRect(){
+  const s=document.getElementById('scene');
+  return s&&s.style.display!=='none'?s.getBoundingClientRect():null;
+}
+
+function mkBee(x,y){
+  return {x,y,vx:0,vy:0,wing:Math.random()*Math.PI*2,angle:0,
+    mode:'roam',tx:x,ty:y,roamT:0,angryT:0,biting:false,
+    flipDir:1,flipFrom:0,flipT:0,flipDur:750};
+}
+
+const beeList=[
+  mkBee(window.innerWidth*0.8,window.innerHeight*0.25),
+  mkBee(window.innerWidth*0.15,window.innerHeight*0.7)
+];
+
+// Which bee takes the NEXT flip — alternates
+let nextFlipBee=0;
+
+// Called when a page turn is requested — sends one bee to do the flip/////////////////////////////////////////////////////////
+function beeGoFlip(dir,fromIdx,onBite){
+  const b=beeList[nextFlipBee];
+  nextFlipBee=(nextFlipBee+1)%beeList.length;
+
+  // interrupt whatever it's doing
+  b.mode='flyto';
+  b.biting=false;
+
+  const r=diaryRect();
+  if(r){
+    b.tx=dir===1 ? r.right-20 : r.left+20;
+    b.ty=r.top+r.height*0.38;
+  }
+
+  b.flipDir=dir;
+  b.flipFrom=fromIdx;
+  b.flipT=0;
+  b.flipDur=750;
+  b._doFlip=true;
+
+  // 🔥 store callback to trigger page flip when bee bites
+  b._onBite=onBite;
+}
+
+function newRoam(b){
+  const r=diaryRect();
+  if(!r){b.tx=Math.random()*window.innerWidth;b.ty=Math.random()*window.innerHeight;return;}
+  const a=Math.random()*Math.PI*2;
+  const rx=r.width*0.5+80+Math.random()*70;
+  const ry=r.height*0.5+60+Math.random()*50;
+  b.tx=Math.max(40,Math.min(window.innerWidth-40,r.left+r.width/2+Math.cos(a)*rx));
+  b.ty=Math.max(40,Math.min(window.innerHeight-40,r.top+r.height/2+Math.sin(a)*ry));
+  b.roamT=2+Math.random()*2.5;
+}
+beeList.forEach(function(b){newRoam(b);});
+
+function updateBee(b,dt,ts){
+  b.wing+=9*dt;
+  const dxM=b.x-mouseX,dyM=b.y-mouseY;
+  const dstM=Math.sqrt(dxM*dxM+dyM*dyM);
+
+  if(b.mode==='roam'&&dstM<90){b.mode='flee';}
+  if(b.mode==='flee'&&dstM>160){b.mode='roam';}
+
+  if(b.mode==='angry'){
+    b.angryT-=dt;
+    // spin + jitter
+    b.angle+=8*dt;
+    b.vx+=(Math.random()-0.5)*300*dt;
+    b.vy+=(Math.random()-0.5)*300*dt;
+    b.vx*=0.88;b.vy*=0.88;
+    b.x+=b.vx*dt;b.y+=b.vy*dt;
+    if(b.angryT<=0){b.mode='roam';b.angle=0;newRoam(b);}
+
+  } else if(b.mode==='roam'){
+    const dx=b.tx-b.x,dy=b.ty-b.y;
+    const d=Math.sqrt(dx*dx+dy*dy)||1;
+    const sp=88;
+    b.vx+=(dx/d*sp-b.vx)*dt*1.7;
+    b.vy+=(dy/d*sp-b.vy)*dt*1.7;
+    b.vy+=Math.sin(ts*0.0025+b.wing*0.1)*9*dt;
+    b.x+=b.vx*dt;b.y+=b.vy*dt;
+    b.angle=Math.atan2(b.vy,b.vx)+Math.PI/2;
+    b.roamT-=dt;
+    if(d<25||b.roamT<=0)newRoam(b);
+
+  } else if(b.mode==='flee'){
+    const sp=200+(90-dstM)*2;
+    b.vx+=(dxM/(dstM||1)*sp-b.vx)*dt*5;
+    b.vy+=(dyM/(dstM||1)*sp-b.vy)*dt*5;
+    b.x+=b.vx*dt;b.y+=b.vy*dt;
+    b.x=Math.max(30,Math.min(window.innerWidth-30,b.x));
+    b.y=Math.max(30,Math.min(window.innerHeight-30,b.y));
+    b.angle=Math.atan2(b.vy,b.vx)+Math.PI/2;
+    newRoam(b);
+
+  } else if(b.mode==='flyto'){
+    const dx=b.tx-b.x,dy=b.ty-b.y;
+    const d=Math.sqrt(dx*dx+dy*dy)||1;
+    const sp=380;
+    b.vx+=(dx/d*sp-b.vx)*dt*5;
+    b.vy+=(dy/d*sp-b.vy)*dt*5;
+    b.x+=b.vx*dt;b.y+=b.vy*dt;
+    b.angle=Math.atan2(b.vy,b.vx)+Math.PI/2;
+    if(d<20 && b._doFlip){
+    b._doFlip=false;
+    b.vx=0;b.vy=0;
+    b.mode='flipping';
+    b.flipT=0;
+    b.biting=true;
+    if(b._onBite){
+    b._onBite();
+    b._onBite=null;
+  }
+}
+
+
+  } else if(b.mode==='flipping'){
+    b.flipT+=dt;
+    const prog=Math.min(b.flipT/(b.flipDur/1000),1);
+    const e=ease(prog);
+    const r=diaryRect();
+    if(r){
+      if(b.flipDir===1){
+        b.x=r.left+(r.right-r.left)*(1-e)-14;
+        b.angle=Math.PI; // facing left
+      } else {
+        b.x=r.left+(r.right-r.left)*e+14;
+        b.angle=0; // facing right
+      }
+      b.y=r.top+r.height*0.38+Math.sin(ts*0.012)*4;
+    }
+    if(prog>=1){
+      b.biting=false;
+      b.mode='flyback';
+      newRoam(b);
+    }
+
+  } else if(b.mode==='flyback'){
+    const dx=b.tx-b.x,dy=b.ty-b.y;
+    const d=Math.sqrt(dx*dx+dy*dy)||1;
+    const sp=180;
+    b.vx+=(dx/d*sp-b.vx)*dt*3;
+    b.vy+=(dy/d*sp-b.vy)*dt*3;
+    b.x+=b.vx*dt;b.y+=b.vy*dt;
+    b.angle=Math.atan2(b.vy,b.vx)+Math.PI/2;
+    if(d<35){b.mode='roam';}
+  }
+}
+
+function drawBee(b){
+  const ctx=bx;
+  ctx.save();
+  ctx.translate(b.x,b.y);
+  ctx.rotate(b.angle);
+
+  const wf=Math.abs(Math.sin(b.wing))*8;
+  const angry=(b.mode==='angry');
+
+  if(b.biting){
+    // ── HORIZONTAL BITING BEE ──
+    // abdomen (left side)
+    ctx.save();
+    ctx.beginPath();ctx.ellipse(0,0,13,8.5,0,0,Math.PI*2);
+    ctx.fillStyle='#f5c518';ctx.fill();
+    ctx.beginPath();ctx.ellipse(0,0,13,8.5,0,0,Math.PI*2);ctx.clip();
+    [-7,-1,5,10].forEach(sx=>{ctx.fillStyle='#111';ctx.globalAlpha=0.68;ctx.fillRect(sx,-12,3.5,24);ctx.globalAlpha=1;});
+    ctx.restore();
+    ctx.beginPath();ctx.ellipse(0,0,13,8.5,0,0,Math.PI*2);ctx.strokeStyle='#222';ctx.lineWidth=1.2;ctx.stroke();
+    // wings above
+    ctx.globalAlpha=0.7;
+    ctx.beginPath();ctx.ellipse(-3,-13-wf,12,5.5,-0.3,0,Math.PI*2);ctx.fillStyle='rgba(200,230,255,0.9)';ctx.fill();ctx.strokeStyle='rgba(80,140,210,0.5)';ctx.lineWidth=0.8;ctx.stroke();
+    ctx.beginPath();ctx.ellipse(5,-11-wf,10,5,0.2,0,Math.PI*2);ctx.fill();ctx.stroke();
+    ctx.globalAlpha=1;
+    // thorax
+    ctx.beginPath();ctx.ellipse(-15,0,7,7,0,0,Math.PI*2);ctx.fillStyle='#d4a000';ctx.fill();ctx.strokeStyle='#222';ctx.lineWidth=1;ctx.stroke();
+    // head (right side, facing right)
+    ctx.beginPath();ctx.arc(19,0,8,0,Math.PI*2);ctx.fillStyle='#f5c518';ctx.fill();ctx.strokeStyle='#222';ctx.lineWidth=1.1;ctx.stroke();
+    ctx.beginPath();ctx.arc(20,-3,3,0,Math.PI*2);ctx.fillStyle='#fff';ctx.fill();
+    ctx.beginPath();ctx.arc(21,-3,1.5,0,Math.PI*2);ctx.fillStyle='#111';ctx.fill();
+    // mandibles open toward page
+    ctx.beginPath();ctx.moveTo(26,-3);ctx.lineTo(32,-6);ctx.moveTo(26,2);ctx.lineTo(32,5);
+    ctx.strokeStyle='#444';ctx.lineWidth=2;ctx.lineCap='round';ctx.stroke();ctx.lineCap='butt';
+    // antennae
+    ctx.beginPath();ctx.moveTo(21,-7);ctx.quadraticCurveTo(25,-15,21,-21);
+    ctx.moveTo(25,-6);ctx.quadraticCurveTo(31,-13,29,-20);
+    ctx.strokeStyle='#333';ctx.lineWidth=1.1;ctx.stroke();
+    ctx.beginPath();ctx.arc(21,-21,2,0,Math.PI*2);ctx.arc(29,-20,2,0,Math.PI*2);ctx.fillStyle='#333';ctx.fill();
+    // stinger
+    ctx.beginPath();ctx.moveTo(-12,0);ctx.lineTo(-19,0);ctx.strokeStyle='#888';ctx.lineWidth=2;ctx.lineCap='round';ctx.stroke();ctx.lineCap='butt';
+
+  } else {
+    // ── NORMAL UPRIGHT BEE ──
+    // WINGS FIRST (behind body) — at mid-body level (2nd-3rd stripe)
+    ctx.globalAlpha=0.72;
+    ctx.beginPath();ctx.ellipse(-14,1-wf,13,6,-0.48,0,Math.PI*2);ctx.fillStyle='rgba(200,230,255,0.92)';ctx.fill();ctx.strokeStyle='rgba(80,140,210,0.5)';ctx.lineWidth=0.9;ctx.stroke();
+    ctx.beginPath();ctx.ellipse(-11,8-wf*0.55,9,4.5,-0.2,0,Math.PI*2);ctx.fillStyle='rgba(200,230,255,0.8)';ctx.fill();ctx.strokeStyle='rgba(80,140,210,0.4)';ctx.lineWidth=0.7;ctx.stroke();
+    ctx.beginPath();ctx.ellipse(14,1-wf,13,6,0.48,0,Math.PI*2);ctx.fillStyle='rgba(200,230,255,0.92)';ctx.fill();ctx.strokeStyle='rgba(80,140,210,0.5)';ctx.lineWidth=0.9;ctx.stroke();
+    ctx.beginPath();ctx.ellipse(11,8-wf*0.55,9,4.5,0.2,0,Math.PI*2);ctx.fillStyle='rgba(200,230,255,0.8)';ctx.fill();ctx.strokeStyle='rgba(80,140,210,0.4)';ctx.lineWidth=0.7;ctx.stroke();
+    ctx.globalAlpha=1;
+
+    // abdomen
+    ctx.save();
+    ctx.beginPath();ctx.ellipse(0,14,9,13,0,0,Math.PI*2);
+    ctx.fillStyle='#f5c518';ctx.fill();
+    ctx.beginPath();ctx.ellipse(0,14,9,13,0,0,Math.PI*2);ctx.clip();
+    [5,11,17,22].forEach(sy=>{ctx.fillStyle='#111';ctx.globalAlpha=0.7;ctx.fillRect(-12,sy,24,4.5);ctx.globalAlpha=1;});
+    ctx.restore();
+    ctx.beginPath();ctx.ellipse(0,14,9,13,0,0,Math.PI*2);ctx.strokeStyle='#222';ctx.lineWidth=1.2;ctx.stroke();
+
+    // stinger
+    ctx.beginPath();ctx.moveTo(-1.5,26);ctx.lineTo(0,32);ctx.lineTo(1.5,26);ctx.fillStyle='#888';ctx.fill();
+
+    // thorax
+    ctx.beginPath();ctx.ellipse(0,0,7.5,6,0,0,Math.PI*2);ctx.fillStyle='#d4a000';ctx.fill();ctx.strokeStyle='#222';ctx.lineWidth=1;ctx.stroke();
+
+    // head
+    ctx.beginPath();ctx.arc(0,-14,8,0,Math.PI*2);ctx.fillStyle='#f5c518';ctx.fill();ctx.strokeStyle='#222';ctx.lineWidth=1.1;ctx.stroke();
+
+    if(angry){
+      // angry red eyes
+      ctx.beginPath();ctx.arc(-3,-14,3,0,Math.PI*2);ctx.fillStyle='#fff';ctx.fill();
+      ctx.beginPath();ctx.arc(3,-14,3,0,Math.PI*2);ctx.fillStyle='#fff';ctx.fill();
+      ctx.beginPath();ctx.arc(-3,-14,1.6,0,Math.PI*2);ctx.fillStyle='#c00';ctx.fill();
+      ctx.beginPath();ctx.arc(3,-14,1.6,0,Math.PI*2);ctx.fillStyle='#c00';ctx.fill();
+      // angry eyebrows
+      ctx.beginPath();ctx.moveTo(-6,-19);ctx.lineTo(-1,-16.5);ctx.moveTo(6,-19);ctx.lineTo(1,-16.5);
+      ctx.strokeStyle='#600';ctx.lineWidth=1.8;ctx.stroke();
+      // frown
+      ctx.beginPath();ctx.arc(0,-11,3.5,Math.PI+0.35,-0.35,true);ctx.strokeStyle='#500';ctx.lineWidth=1.3;ctx.stroke();
+      // anger sparks
+      ctx.strokeStyle='#e00';ctx.lineWidth=1.2;
+      ctx.beginPath();ctx.moveTo(10,-21);ctx.lineTo(14,-18);ctx.stroke();
+      ctx.beginPath();ctx.moveTo(-10,-21);ctx.lineTo(-14,-18);ctx.stroke();
+      ctx.beginPath();ctx.moveTo(11,-14);ctx.lineTo(16,-13);ctx.stroke();
+    } else {
+      // normal cute eyes
+      ctx.beginPath();ctx.arc(-3,-14,3,0,Math.PI*2);ctx.fillStyle='#fff';ctx.fill();
+      ctx.beginPath();ctx.arc(3,-14,3,0,Math.PI*2);ctx.fillStyle='#fff';ctx.fill();
+      ctx.beginPath();ctx.arc(-2.5,-14,1.5,0,Math.PI*2);ctx.fillStyle='#111';ctx.fill();
+      ctx.beginPath();ctx.arc(3.5,-14,1.5,0,Math.PI*2);ctx.fillStyle='#111';ctx.fill();
+      ctx.beginPath();ctx.arc(-1.8,-15,0.6,0,Math.PI*2);ctx.fillStyle='#fff';ctx.fill();
+      ctx.beginPath();ctx.arc(4.2,-15,0.6,0,Math.PI*2);ctx.fillStyle='#fff';ctx.fill();
+    }
+
+    // antennae
+    ctx.beginPath();
+    ctx.moveTo(-3,-21);ctx.quadraticCurveTo(-7,-28,-6,-34);
+    ctx.moveTo(3,-21);ctx.quadraticCurveTo(7,-28,6,-34);
+    ctx.strokeStyle='#333';ctx.lineWidth=1.2;ctx.stroke();
+    ctx.beginPath();ctx.arc(-6,-35,2.2,0,Math.PI*2);ctx.arc(6,-35,2.2,0,Math.PI*2);ctx.fillStyle='#333';ctx.fill();
+  }
+
+  ctx.restore();
+}
+
+let lastT=0;
+function beeLoop(ts){
+  const dt=Math.min((ts-lastT)/1000,0.05);
+  lastT=ts;
+  bx.clearRect(0,0,BC.width,BC.height);
+  // draw back bee first
+  const sorted=[...beeList].sort((a,b)=>a.y-b.y);
+  sorted.forEach(b=>{ updateBee(b,dt,ts); drawBee(b); });
+  requestAnimationFrame(beeLoop);
+}
+requestAnimationFrame(beeLoop);
+
+// ═══════════════════════════════════════════
+// VIDEO
+// ═══════════════════════════════════════════
+function handleVideo(e){
+  const f=e.target.files[0];if(!f)return;
+  document.getElementById('main-vid').src=URL.createObjectURL(f);
+  const b=document.getElementById('upload-btn');
+  b.textContent='✅ Ready!';
+  setTimeout(()=>b.style.display='none',2500);
+}
+
+function startCountdown(){
+
+  // 🎵 FADE OUT BACKGROUND MUSIC SMOOTHLY
+  const music = document.getElementById('bg-music');
+  if(music){
+    let fade = setInterval(function(){
+      if(music.volume > 0.02){
+        music.volume -= 0.02;
+      } else {
+        clearInterval(fade);
+        music.pause();
+        music.volume = 0.3; // reset for next time
+      }
+    }, 60); // lower number = faster fade
+  }
+
+  document.getElementById('play-btn').style.display='none';
+  const ov=document.getElementById('film-overlay');
+  const num=document.getElementById('cdown');
+  ov.style.display='flex';
+  ov.style.opacity='1';
+
+  const seq=['3','2','1','♡'];
+  let i=0;
+
+  function tick(){
+    if(i>=seq.length){
+      ov.style.transition='opacity 0.5s';
+      ov.style.opacity='0';
+      setTimeout(()=>{
+        ov.style.display='none';
+        goBlackout();
+      },500);
+      return;
+    }
+
+    num.style.transition='none';
+    num.style.opacity='0';
+    num.style.transform='scale(1.4)';
+    num.textContent=seq[i];
+
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{
+      num.style.transition='opacity 0.25s,transform 0.3s';
+      num.style.opacity='1';
+      num.style.transform='scale(1)';
+    }));
+
+    i++;
+    setTimeout(tick,i<seq.length?900:500);
+  }
+
+  tick();
+}
+function goBlackout(){
+  const bo=document.getElementById('blackout');
+  const vid=document.getElementById('main-vid');
+  const fv=document.createElement('video');
+  fv.src=vid.src;fv.style.cssText='width:100%;height:100%;object-fit:contain;';
+  fv.playsInline=true;
+  bo.innerHTML='';bo.appendChild(fv);
+  bo.style.display='flex';bo.style.opacity='0';bo.style.transition='opacity 0.6s';
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{bo.style.opacity='1';}));
+  setTimeout(()=>fv.play().catch(()=>{}),650);
+  fv.addEventListener('ended',()=>{bo.style.transition='opacity 1s';bo.style.opacity='0';setTimeout(()=>bo.style.display='none',1050);});
+  fv.addEventListener('click',()=>fv.paused?fv.play():fv.pause());
+}
+function spawnHeartsAt(x,y){
+  for(let i=0;i<3;i++){
+    const heart=document.createElement('div');
+    heart.className='kiss-heart';
+    heart.style.left=(x + (Math.random()*20-10))+'px';
+    heart.style.top=(y)+'px';
+    document.body.appendChild(heart);
+    setTimeout(()=>heart.remove(),1200);
+  }
+}
+setInterval(function(){
+
+  if(!diaryOpen) return;
+
+  const pages=document.querySelectorAll('.dpage');
+  let activePage=null;
+
+  pages.forEach(function(p){
+    if(p.style.display==='flex' || p.style.display==='block'){
+      activePage=p;
+    }
+  });
+
+  if(!activePage) return;
+
+  const mark=activePage.querySelector('.page-mark');
+  if(!mark) return;
+
+  const rect=mark.getBoundingClientRect();
+
+  // choose random bee
+  const b=beeList[Math.floor(Math.random()*beeList.length)];
+  b.mode='flyto';
+  b.tx=rect.left+rect.width/2;
+  b.ty=rect.top+rect.height/2;
+
+  setTimeout(function(){
+    spawnHeartsAt(rect.left+rect.width/2, rect.top+rect.height/2);
+  },600);
+
+},6000);
+</script>
+
+<audio id="bg-music" loop>
+  <source src="kimino-toriko.mp3" type="audio/mpeg">
+</audio>
+
+<!-- SECRET EASTER EGG -->
+<div id="secret-overlay">
+  <div class="secret-box">
+
+    <h2>You found it after i told you didn't ya?👀dumass</h2>
+
+    <!-- First Image -->
+    <img src="secret.jpg" class="secret-photo">
+
+    <!-- Second Image -->
+    <img src="secret2.jpg" class="secret-photo">
+    <p class="secret-caption">
+      Fuck you.
+    </p>
+
+    <!-- Video -->
+    <video class="secret-video" controls>
+      <source src="secret-video.mp4" type="video/mp4">
+    </video>
+    <p class="secret-caption">
+      me after seeing you...lol
+    </p>
+
+    <button onclick="closeSecret()">Close</button>
+
+  </div>
+</div>
+</body>
+</html>
