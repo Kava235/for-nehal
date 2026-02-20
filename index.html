@@ -121,9 +121,13 @@
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 body{
-  width:100vw;height:100vh;overflow:hidden;
+  width:100vw;
+  height:100dvh;   /* 🔥 change vh → dvh */
+  overflow:hidden;
   background:radial-gradient(ellipse at 45% 40%,#ffd6e7 0%,#fce4ec 55%,#f5b8cc 100%);
-  display:flex;align-items:center;justify-content:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   font-family:'Kalam',cursive;
 }
 
@@ -162,7 +166,17 @@ body{
 #landing .l-inner{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;padding:24px;}
 @keyframes fu{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 
-/* ── DIARY SCENE ── */ #scene{position:relative;z-index:10;display:none;} #diary-shadow{ position:absolute;bottom:-16px;left:8%;width:84%;height:22px; background:radial-gradient(ellipse,rgba(90,30,50,0.25) 0%,transparent 75%); border-radius:50%;pointer-events:none; } #diary{ position:relative; width:min(680px,88vw);height:min(480px,78vh); border-radius:6px 12px 12px 6px; box-shadow:-4px 0 12px rgba(0,0,0,0.18),4px 4px 28px rgba(90,30,50,0.22),0 8px 32px rgba(90,30,50,0.15); }/* ── SPINE ── */
+/* ── DIARY SCENE ── */ 
+#scene{position:relative;z-index:10;display:none;} #diary{
+  position:relative;
+  width:min(680px,88vw);
+  height:min(480px,78dvh);  /* 🔥 vh → dvh */
+  border-radius:6px 12px 12px 6px;
+  box-shadow:-4px 0 12px rgba(0,0,0,0.18),
+             4px 4px 28px rgba(90,30,50,0.22),
+             0 8px 32px rgba(90,30,50,0.15);
+} background:radial-gradient(ellipse,rgba(90,30,50,0.25) 0%,transparent 75%); border-radius:50%;pointer-events:none; } #diary{ position:relative; width:min(680px,88vw);height:min(480px,78vh); border-radius:6px 12px 12px 6px; box-shadow:-4px 0 12px rgba(0,0,0,0.18),4px 4px 28px rgba(90,30,50,0.22),0 8px 32px rgba(90,30,50,0.15); }
+/* ── SPINE ── */
 #spine{
   position:absolute;left:0;top:0;bottom:0;width:38px;
   background:linear-gradient(180deg,#b84060 0%,#c0506e 30%,#b03858 70%,#a03050 100%);
@@ -308,8 +322,8 @@ body{
 @media (max-width: 768px){
 
   #diary{
-    width:96vw !important;
-    height:85vh !important;
+  width:96vw !important;
+  height:85dvh !important;
   }
 
   /* shrink spine so text gets more width */
