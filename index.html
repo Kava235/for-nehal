@@ -304,6 +304,56 @@ body{
 
 /* ── UPLOAD BTN ── */
 #upload-btn{position:fixed;top:10px;right:10px;z-index:400;padding:7px 14px;background:rgba(20,5,15,0.6);color:rgba(255,220,200,0.85);border:1px solid rgba(255,200,180,0.25);font-family:monospace;font-size:11px;cursor:pointer;border-radius:4px;}
+
+@media (max-width: 768px){
+
+  #diary{
+    width:96vw !important;
+    height:85vh !important;
+  }
+
+  /* shrink spine so text gets more width */
+  #spine{
+    width:26px !important;
+  }
+
+  #page-area{
+    left:26px !important;
+  }
+
+  .pc{
+    padding:14px 14px 14px 22px !important;
+  }
+
+  .dpage::after{
+    left:18px !important;
+  }
+
+  #rings{
+    display:none;
+  }
+
+  /* fix navigation placement */
+  #nav-wrap{
+    bottom:20px !important;
+    gap:10px;
+  }
+
+  .nbtn{
+    padding:8px 16px !important;
+    font-size:0.55rem !important;
+  }
+.nb-body{
+    font-size:1rem !important;
+    line-height:1.6 !important;
+  }
+
+  .nb-h{
+    font-size:1.5rem !important;
+  }
+
+
+}
 </style>
 </head>
 <body>
@@ -887,12 +937,19 @@ document.addEventListener('keydown',function(e){
   if(e.key==='ArrowRight'||e.key==='ArrowDown')nextPage();
   if(e.key==='ArrowLeft'||e.key==='ArrowUp')prevPage();
 });
-let swx=0;
-document.addEventListener('touchstart',function(e){swx=e.touches[0].clientX;});
-document.addEventListener('touchend',function(e){
-  const d=swx-e.changedTouches[0].clientX;
-  if(Math.abs(d)>40){d>0?nextPage():prevPage();}
-});
+if(window.innerWidth > 768){
+  let swx=0;
+  document.addEventListener('touchstart',function(e){
+    swx=e.touches[0].clientX;
+  });
+
+  document.addEventListener('touchend',function(e){
+    const d=swx-e.changedTouches[0].clientX;
+    if(Math.abs(d)>60){
+      d>0?nextPage():prevPage();
+    }
+  });
+}
 
 // ═══════════════════════════════════════════
 // BEE SYSTEM
@@ -1304,6 +1361,14 @@ setInterval(function(){
   },600);
 
 },6000);
+
+document.addEventListener("visibilitychange", function() {
+  const music = document.getElementById("bg-music");
+  if(document.hidden){
+    if(music) music.pause();
+  }
+});
+
 </script>
 
 <audio id="bg-music" loop>
